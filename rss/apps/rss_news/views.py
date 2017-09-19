@@ -12,4 +12,4 @@ def index(request):
         'value': 'Hello Python',
         'number': str(number)
     }
-    return render(request, 'index.html', context)
+    return render(request, 'my_bootstrap3.html', context)
