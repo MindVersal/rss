@@ -5,8 +5,14 @@
         <div class="container">
             <div class="navbar-header">
                 <span>
-                    <a class="navbar-brand"><i class="fa fa-random"></i> RSS News</a>
+                    <a class="navbar-brand"><i class="fa fa-newspaper-o"></i> RSS News</a>
                 </span>
+            </div>
+            <div class="navbar-right">
+                <div class="navbar-text">
+                    <button class="btn btn-default btn-xs">Log in</button>
+                    <button class="btn btn-default btn-xs">Log up</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -14,18 +20,19 @@
         <div class="row">
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-0 col-md-6">
+                {% for post in posts %}
                 <div class="post-block">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3>Title</h3>
+                                <h3>{{ post.title }}</h3>
                                 <hr/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
                                 <div>
-                                    Lorem Ipsum is simple dummy text of the printing...
+                                    {{ post.text }}
                                 </div>
                             </div>
                         </div>
@@ -42,62 +49,7 @@
                     </div>
                 </div>
                 <br/>
-                <div class="post-block">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3>Title</h3>
-                                <hr/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div>
-                                    Lorem Ipsum is simple dummy text of the printing...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 text-right">
-                                <div class="btn-group">
-                                    <button class="btn btn-sm btn-default">Read</button>
-                                    <button class="btn btn-sm btn-default">Add Favorite</button>
-                                </div>
-                            </div>
-                            <br/>
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-                <br/>
-                <div class="post-block">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3>Title</h3>
-                                <hr/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div>
-                                    Lorem Ipsum is simple dummy text of the printing...
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 text-right">
-                                <div class="btn-group">
-                                    <button class="btn btn-sm btn-default">Read</button>
-                                    <button class="btn btn-sm btn-default">Add Favorite</button>
-                                </div>
-                            </div>
-                            <br/>
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-                <br/>
+                {% endfor %}
             </div>
             <div class="col-xs-0 col-md-3"></div>
         </div>
