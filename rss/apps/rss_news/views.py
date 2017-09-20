@@ -19,5 +19,8 @@ def post(request, index):
         result = post.text
     except Post.DoesNotExist:
         result = 'Post does not exist!'
+    return HttpResponse(result)
 
-    return result
+
+def log_form(request):
+    return render(request, 'log_form.html')

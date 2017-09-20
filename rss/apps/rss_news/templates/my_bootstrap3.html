@@ -9,12 +9,13 @@
     {% if 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
     {% block bootstrap3_extra_head %}{% endblock %}
     {% load staticfiles %}
-    <link href="{% static 'rss_news/style.css'%}" type="text/css" rel="stylesheet"
+    <link href="{% static 'rss_news/style.css'%}" type="text/css" rel="stylesheet">
 </head>
 <body>
     {% block bootstrap3_content %}{% endblock %}
     {% if 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
     {% block bootstrap3_extra_script %}{% endblock %}
+    {% block add_script %}{% endblock %}
 </body>
-{% block add_script %}{% endblock %}
+{#{% block add_script %}{% endblock %}#}
 </html>
