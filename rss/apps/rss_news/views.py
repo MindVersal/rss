@@ -24,3 +24,11 @@ def post(request, index):
 
 def log_form(request):
     return render(request, 'log_form.html')
+
+
+def signup(request):
+    return render(request, 'signup.html')
+
+
+def login(request):
+    return render(request, 'login.html')

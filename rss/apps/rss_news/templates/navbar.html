@@ -1,0 +1,25 @@
+{% extends 'my_bootstrap3.html' %}
+{% load bootstrap3 %}
+{% block bootstrap3_navbar %}
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <span>
+                    <a href="." class="navbar-brand"><i class="fa fa-newspaper-o"></i> RSS News</a>
+                </span>
+            </div>
+            <div class="navbar-right">
+                <div class="navbar-text">
+                    <a href="login">
+                        <button class="btn btn-default btn-xs">Login</button>
+                    </a>
+                    <a href="signup">
+                        <button class="btn btn-default btn-xs">Signup</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+{% block add_script %}
+{% endblock %}

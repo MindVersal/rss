@@ -1,0 +1,18 @@
+{% extends 'navbar.html' %}
+{% load bootstrap3 %}
+{% block bootstrap3_content %}
+    <br/>
+    <br/>
+    <div class="container">
+        <h1>Sign up</h1>
+        <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Repeat password" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+        </div>
+        <div class="btn-group btn-group-lg">
+            <a href="#" class="btn btn-sm btn-success">Signup</a>
+        </div>
+    </div>
+{% endblock %}
