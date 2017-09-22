@@ -1,11 +1,11 @@
 {% extends 'my_bootstrap3.html' %}
 {% load bootstrap3 %}
 {% block bootstrap3_content %}
-{#    <script>$('#myModal').modal('show');</script>#}
+{#    <script type="text/javascript">$('#myModal').modal('show');</script>#}
     <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
         Login modal</button>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -133,18 +133,19 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/jquery.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-transition.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-alert.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-modal.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-dropdown.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-scrollspy.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-tab.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-tooltip.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-popover.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-button.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-collapse.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-carousel.js"></script>
-    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-typeahead.js"></script>
-    <script src="{% static 'rss_news/modal.js'%}"></script>
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/jquery.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-transition.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-alert.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-modal.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-dropdown.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-scrollspy.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-tab.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-tooltip.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-popover.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-button.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-collapse.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-carousel.js"></script>#}
+{#    <script src="http://mybootstrap.ru/wp-content/themes/clear-theme/js/bootstrap-typeahead.js"></script>#}
+
+{#    <script src="{% static 'rss_news/modal.js'%}"></script>#}
 {% endblock %}

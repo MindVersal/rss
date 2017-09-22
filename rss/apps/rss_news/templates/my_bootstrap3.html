@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
 {#    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">#}
     <title>{% block bootstrap3_title %} RandomService {% endblock %}</title>
-    {% bootstrap_css %}
+{#    {% bootstrap_css %}#}
     {% if 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
     {% block bootstrap3_extra_head %}{% endblock %}
     {% load staticfiles %}
+    <link href="{% static 'rss_news/bootstrapfiles/css/bootstrap.css'%}" type="text/css" rel="stylesheet">
     <link href="{% static 'rss_news/style.css'%}" type="text/css" rel="stylesheet">
 </head>
 <body>
     {% block bootstrap3_content %}{% endblock %}
     {% if 'javascript_in_head'|bootstrap_setting %}{% bootstrap_javascript jquery=True %}{% endif %}
     {% block bootstrap3_extra_script %}{% endblock %}
-    {% block add_script %}{% endblock %}
+{#    {% block add_script %}{% endblock %}#}
 </body>
-{#{% block add_script %}{% endblock %}#}
+{#    {% bootstrap_javascript %}#}
+    <script src="{% static 'rss_news/jquery-latest.js'%}"></script>
+    <script src="{% static 'rss_news/bootstrapfiles/js/bootstrap.js'%}"></script>
+    {% block add_script %}{% endblock %}
 </html>
