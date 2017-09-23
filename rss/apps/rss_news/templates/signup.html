@@ -1,18 +1,32 @@
 {% extends 'navbar.html' %}
 {% load bootstrap3 %}
+{% load staticfiles %}
 {% block bootstrap3_content %}
+
     <br/>
     <br/>
     <div class="container">
         <h1>Sign up</h1>
-        <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" placeholder="Repeat password" aria-describedby="basic-addon1">
-            <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-        </div>
-        <div class="btn-group btn-group-lg">
-            <a href="#" class="btn btn-sm btn-success">Signup</a>
-        </div>
+
+        <form action="{% url 'signup_user' %}" method="post">
+            {% csrf_token %}
+            <div class="col-md-4">
+                <input type="text" name="user_name" class="form-control" placeholder="Username"
+                       aria-describedby="basic-addon1" id="user_name_input">
+                <input type="text" name="password" class="form-control" placeholder="Password"
+                       aria-describedby="basic-addon1">
+                <input type="text" name="repeat_password" class="form-control" placeholder="Repeat password"
+                       aria-describedby="basic-addon1">
+                <input type="text" name="email" class="form-control" placeholder="Email"
+                       aria-describedby="basic-addon1">
+            </div>
+            <div class="btn-group btn-group-lg">
+                <input type="submit" class="btn btn-sm btn-success">
+            </div>
+        </form>
+        <button class="btn btn-sm btn-danger" id="check_name_btn">Check name</button>
     </div>
+{% endblock %}
+{% block add_script %}
+    <script src="{% static 'rss_news/login.js'%}"></script>
 {% endblock %}
